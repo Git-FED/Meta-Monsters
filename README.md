@@ -1,300 +1,351 @@
-⚡ METAMONSTERS
-A browser-based creature-taming RPG where humanity's greatest mistake — Chemical X — has leaked into the wild. Tame it. Train it. Or watch it consume everything.
+<div align="center">
 
-Metamonsters is a full-stack, single-page creature RPG built entirely in vanilla JavaScript — no frameworks, no modules, no imports, no external dependencies. Every dex entry, every move, every map tile, every NPC, and every line of dialogue lives in plain JS data files loaded via <script> tags. The entire online multiplayer layer runs local-first on localStorage, structured so a real server can be dropped in later without rewriting a single game-side call.
+<h1>⚡ METAMONSTERS</h1>
 
-This README is the canonical summary of the project — built from the three revision passes that took it from a 93-creature v1 to a 113-creature, 59-map, 10-tournament, 112-trainer complete game.
+<p><em>A browser-based creature-taming RPG where humanity's greatest mistake — Chemical X — has leaked into the wild. Tame it. Train it. Or watch it consume everything.</em></p>
 
-📊 The Numbers
-Metric	Count
-🐾 Dex entries (main-world)	93
-🦴 Ancient creatures	15
-👁️ Mystery creatures	5
-📖 Total DEX	113
-⚔️ Moves (category + sense + HM + SM + X + starter rare)	95
-🎒 Items (standard)	83
-💿 TM items (tournament-only)	9
-🗺️ Maps	59
-🌿 Wild encounter areas	40
-🏆 Tournaments	10
-🥋 Tournament trainers	112
-📜 Missions	47
-🎯 Mission objective IDs	38
-🧬 Mutant forms	93
-💥 Mega forms	12
-🖼️ Battle backgrounds	16
-🗃️ Backend tables	17
-🖥️ Hub tabs	13
-✅ Self-checks passing	101 / 101
-🌍 The World
-The game spans two eras of history and one long, dark road between them.
+<p><strong>Metamonsters</strong> is a full-stack, single-page creature RPG built entirely in vanilla JavaScript — no frameworks, no modules, no imports, no external dependencies. Every dex entry, every move, every map tile, every NPC, and every line of dialogue lives in plain JS data files loaded via <code>&lt;script&gt;</code> tags. The entire online multiplayer layer runs <strong>local-first</strong> on <code>localStorage</code>, structured so a real server can be dropped in later without rewriting a single game-side call.</p>
 
-The Main World — 93 creatures, 40+ maps
-Start in Haven, a quiet village at the edge of the Whispering Woods. Take the last remaining starter — a Bear Cub, a Wolf Cub, or a Shark Pup — and push outward through:
+<p>This README is the canonical summary of the project — built from the three revision passes that took it from a 93-creature v1 to a <strong>113-creature, 59-map, 10-tournament, 112-trainer</strong> complete game.</p>
 
-Meadow Route → Whispering Woods → The Mirage Oasis
+<hr>
 
-Ember Dunes → Grand Bazaar → Frozen Roost → Ivory Tower
+<h2>📊 The Numbers</h2>
 
-Rok City (the metropolis) → Rust Fields → Ashen Flats → Wreckyard → Hollow → Echo Caves
+<table align="center" style="text-align:center; border-collapse:collapse;">
+<tr><th>Metric</th><th>Count</th></tr>
+<tr><td>🐾 Dex entries (main-world)</td><td><strong>93</strong></td></tr>
+<tr><td>🦴 Ancient creatures</td><td><strong>15</strong></td></tr>
+<tr><td>👁️ Mystery creatures</td><td><strong>5</strong></td></tr>
+<tr><td>📖 Total <code>DEX</code></td><td><strong>113</strong></td></tr>
+<tr><td>⚔️ Moves (category + sense + HM + SM + X + starter rare)</td><td><strong>95</strong></td></tr>
+<tr><td>🎒 Items (standard)</td><td><strong>83</strong></td></tr>
+<tr><td>💿 TM items (tournament-only)</td><td><strong>9</strong></td></tr>
+<tr><td>🗺️ Maps</td><td><strong>59</strong></td></tr>
+<tr><td>🌿 Wild encounter areas</td><td><strong>40</strong></td></tr>
+<tr><td>🏆 Tournaments</td><td><strong>10</strong></td></tr>
+<tr><td>🥋 Tournament trainers</td><td><strong>112</strong></td></tr>
+<tr><td>📜 Missions</td><td><strong>47</strong></td></tr>
+<tr><td>🎯 Mission objective IDs</td><td><strong>38</strong></td></tr>
+<tr><td>🧬 Mutant forms</td><td><strong>93</strong></td></tr>
+<tr><td>💥 Mega forms</td><td><strong>12</strong></td></tr>
+<tr><td>🖼️ Battle backgrounds</td><td><strong>16</strong></td></tr>
+<tr><td>🗃️ Backend tables</td><td><strong>17</strong></td></tr>
+<tr><td>🖥️ Hub tabs</td><td><strong>13</strong></td></tr>
+<tr><td>✅ Self-checks passing</td><td><strong>101 / 101</strong></td></tr>
+</table>
 
-8 battle-tuned arenas plus The Upper Deck — a Pokémon-Center-style hub for all online features
+<hr>
 
-Encounters are weighted, stage-gated, and atmosphere-driven. Snow falls on the frozen roost, ash drifts through the wasteland, neon sparks rain over Rok City, spores rise in the Hollow. Every area is wired to a battle background + weather pair via AREA_BATTLE.
+<h2>🌍 The World</h2>
 
-The 75+ World — 15 ancients, 5 mysteries, 27 new maps
-Beyond the sealed gate in the Echo Caves lies the world that killed the dinosaurs — and then kept going:
+<p>The game spans two eras of history and one long, dark road between them.</p>
 
-Rex Badlands and its radiating biomes: Horned Plains, Saber Fields, Raptor Grass, Mammoth Steppe, Dire Den, Burning Marsh, Devil's Pond, Ptero Cliffs, High Peaks, Giants' Canopy, Spiders' Hollow, Deep Forest, Deep River, Megalodon Deep, Armored Reef, Sea Scorpion Shallows, Spiral Shoals, Dark Caves
+<h3>The Main World — 93 creatures, 40+ maps</h3>
 
-The Sanctuary — neutral ground. Tents, a campfire that heals and advances the day, an exile trader (2× prices), and a buildable sanctuary camp.
+<p>Start in <strong>Haven</strong>, a quiet village at the edge of the <strong>Whispering Woods</strong>. Take the last remaining starter — a <strong>Bear Cub</strong>, a <strong>Wolf Cub</strong>, or a <strong>Shark Pup</strong> — and push outward through:</p>
 
-3 cave zones — caveMouth, caveDeep, caveGate — each gated by HMs you must earn from tournaments and side missions.
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>Meadow Route</strong> → <strong>Whispering Woods</strong> → <strong>The Mirage Oasis</strong></li>
+<li><strong>Ember Dunes</strong> → <strong>Grand Bazaar</strong> → <strong>Frozen Roost</strong> → <strong>Ivory Tower</strong></li>
+<li><strong>Rok City</strong> (the metropolis) → <strong>Rust Fields</strong> → <strong>Ashen Flats</strong> → <strong>Wreckyard</strong> → <strong>Hollow</strong> → <strong>Echo Caves</strong></li>
+<li><strong>8 battle-tuned arenas</strong> plus <strong>The Upper Deck</strong> — a Pokémon-Center-style hub for all online features</li>
+</ul>
 
-The Five Mystery Hunts
-Legendary creatures do not roam. They hide. Each hideout has a mysterySign that checks the conditions:
+<p>Encounters are weighted, stage-gated, and atmosphere-driven. Snow falls on the frozen roost, ash drifts through the wasteland, neon sparks rain over Rok City, spores rise in the Hollow. Every area is wired to a battle background + weather pair via <code>AREA_BATTLE</code>.</p>
 
-Mystery	Level	Condition
-M1 Spinosaurus	80	Dusk only (17:00–20:00)
-M2 Quetzalcoatlus	82	Dawn only (05:00–08:00)
-M3 Titanoboa	88	Lv 85+ team and a Heat-sense creature
-M4 Megatherium	84	3 berries in the bag (consumed — the fruit trail)
-M5 Giant Vampire Bat	86	None. Listen in the dark. HM LIGHT does not help.
-Mysteries flee at 8% per turn unless put to sleep — and tranquilizer darts actually sleep them.
+<h3>The 75+ World — 15 ancients, 5 mysteries, 27 new maps</h3>
 
-🧬 Creatures
-The 93 Main-World Dex
-Each entry carries: dex id, name, family, stage, category, dominant sense, signature skill, evolution (level or item), per-stage stars, base stats, sprite path, and a one-line flavor hook.
+<p>Beyond the sealed gate in the Echo Caves lies the world that killed the dinosaurs — and then kept going:</p>
 
-Archetypes drive base stats deterministically:
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>Rex Badlands</strong> and its radiating biomes: <strong>Horned Plains</strong>, <strong>Saber Fields</strong>, <strong>Raptor Grass</strong>, <strong>Mammoth Steppe</strong>, <strong>Dire Den</strong>, <strong>Burning Marsh</strong>, <strong>Devil's Pond</strong>, <strong>Ptero Cliffs</strong>, <strong>High Peaks</strong>, <strong>Giants' Canopy</strong>, <strong>Spiders' Hollow</strong>, <strong>Deep Forest</strong>, <strong>Deep River</strong>, <strong>Megalodon Deep</strong>, <strong>Armored Reef</strong>, <strong>Sea Scorpion Shallows</strong>, <strong>Spiral Shoals</strong>, <strong>Dark Caves</strong></li>
+<li><strong>The Sanctuary</strong> — neutral ground. Tents, a campfire that heals and advances the day, an exile trader (2× prices), and a buildable sanctuary camp.</li>
+<li><strong>3 cave zones</strong> — <code>caveMouth</code>, <code>caveDeep</code>, <code>caveGate</code> — each gated by HMs you must earn from tournaments and side missions.</li>
+</ul>
 
-Tank — Bear, Crocodile, Snail, Crab, Axolotl, Toad
+<h3>The Five Mystery Hunts</h3>
 
-Attacker — Lion, Tiger, Cobra, Komodo, Scorpion, Octopus, Tuna
+<p>Legendary creatures do not roam. They hide. Each hideout has a <code>mysterySign</code> that checks the conditions:</p>
 
-Fast — Wolf, Shark, Eagle, Owl, Bee, Butterfly, Spider, Shrimp, Squid
+<table align="center" style="text-align:center; border-collapse:collapse;">
+<tr><th>Mystery</th><th>Level</th><th>Condition</th></tr>
+<tr><td>M1 Spinosaurus</td><td>80</td><td><strong>Dusk only</strong> (17:00–20:00)</td></tr>
+<tr><td>M2 Quetzalcoatlus</td><td>82</td><td><strong>Dawn only</strong> (05:00–08:00)</td></tr>
+<tr><td>M3 Titanoboa</td><td>88</td><td>Lv 85+ team <strong>and</strong> a Heat-sense creature</td></tr>
+<tr><td>M4 Megatherium</td><td>84</td><td><strong>3 berries</strong> in the bag (consumed — the fruit trail)</td></tr>
+<tr><td>M5 Giant Vampire Bat</td><td>86</td><td>None. Listen in the dark. HM LIGHT does not help.</td></tr>
+</table>
 
-Balanced — Penguin, Frog, Salmon, Eel, Ant, Tarantula, Lobster
+<p>Mysteries flee at <strong>8% per turn</strong> unless put to sleep — and tranquilizer darts actually sleep them.</p>
 
-Stat totals: 210 (stage 1) / 320 (stage 2) / 450 (stage 3), plus +0 / +5 / +12 per stat by star rating. Instinct variants get +15% atk/spd, −15% def at runtime — never baked into the dex.
+<hr>
 
-Five item evolutions exist: Eel → Electric Eel (Car Battery), Snail → Armored Snail (Iron Ore), Crab → Steel Crab (Scrap Metal), Frog → Poison Dart Frog (Herbs), Penguin → Emperor Penguin (Cold Pack).
+<h2>🧬 Creatures</h2>
 
-Mutants (Pass 2)
-93 mutant forms — wild only in the east (rustFields, ashenFlats, wreckyard, hollow, mixed in echoCaves) and only after unlock_mutants activates at The Dump Site. Stat profile: +20% atk, +15% hp. Catch rate ×0.6 — or ×1.3 on the Fight path. A creature is normal, Instinct, or Mutant — never stacked.
+<h3>The 93 Main-World Dex</h3>
 
-Mega Evolution (Pass 2)
-12 mega forms. Activate from the battle menu when your active creature is eligible, you hold Chemical X, and no Mega has been used this battle. Costs 1 Chemical X. Grants +30% atk/def/spd, +20% hp for the battle. 10% berserk chance — a berserk creature picks a random move and has a 25% self-hit. Megas unmega at battle end (one battle only).
+<p>Each entry carries: dex id, name, family, stage, category, dominant sense, signature skill, evolution (level or item), per-stage stars, base stats, sprite path, and a one-line flavor hook.</p>
 
-Ancients & Mysteries (Pass 3)
-15 ancients (A01–A15) — all stage 3, no evolutions, 4-star or 5-star, stat totals 520 / 580. 5 mysteries (M1–M5) — all 5-star, stat total 600. Ancients have no mutant forms and no instinct art. Ancient type-chart rule: baseType() strips the "Ancient " prefix so ancients fight on their base category's chart, and ancient-typed moves get STAB via the same normalization.
+<p><strong>Archetypes</strong> drive base stats deterministically:</p>
 
-Ancient catch rule: nets, cages, and lassos cannot hold them (stage 3 exceeds their maxStage). Only traps / snares / tranquilizer darts work.
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>Tank</strong> — Bear, Crocodile, Snail, Crab, Axolotl, Toad</li>
+<li><strong>Attacker</strong> — Lion, Tiger, Cobra, Komodo, Scorpion, Octopus, Tuna</li>
+<li><strong>Fast</strong> — Wolf, Shark, Eagle, Owl, Bee, Butterfly, Spider, Shrimp, Squid</li>
+<li><strong>Balanced</strong> — Penguin, Frog, Salmon, Eel, Ant, Tarantula, Lobster</li>
+</ul>
 
-⚔️ Battle System
-Two orthogonal type charts
-CAT_CHART — 9 categories (Mammal, Bird, Fish, Reptile, Arachnid, Insect, Amphibian, Mollusk, Crustacean), with every strong/weak pairing from the battle doc.
+<p>Stat totals: <strong>210</strong> (stage 1) / <strong>320</strong> (stage 2) / <strong>450</strong> (stage 3), plus <strong>+0 / +5 / +12 per stat</strong> by star rating. Instinct variants get <strong>+15% atk/spd, −15% def</strong> at runtime — never baked into the dex.</p>
 
-SENSE_CHART — 7 senses (Sight, Hearing, Echolocation, Electroreception, Touch, Smell, Heat), same treatment.
+<p><strong>Five item evolutions</strong> exist: Eel → Electric Eel (Car Battery), Snail → Armored Snail (Iron Ore), Crab → Steel Crab (Scrap Metal), Frog → Poison Dart Frog (Herbs), Penguin → Emperor Penguin (Cold Pack).</p>
 
-Default multiplier is 1. Moves are kind: "category" | "sense" and typed to match.
+<h3>Mutants (Pass 2)</h3>
 
-Move roster — 95 total
-36 category moves
+<p><strong>93 mutant forms</strong> — wild <strong>only</strong> in the east (<code>rustFields</code>, <code>ashenFlats</code>, <code>wreckyard</code>, <code>hollow</code>, mixed in <code>echoCaves</code>) and <strong>only after</strong> <code>unlock_mutants</code> activates at The Dump Site. Stat profile: <strong>+20% atk, +15% hp</strong>. Catch rate <strong>×0.6</strong> — or <strong>×1.3</strong> on the Fight path. A creature is normal, Instinct, <strong>or</strong> Mutant — never stacked.</p>
 
-28 sense moves
+<h3>Mega Evolution (Pass 2)</h3>
 
-8 HMs
+<p><strong>12 mega forms.</strong> Activate from the battle menu when your active creature is eligible, you hold <strong>Chemical X</strong>, and no Mega has been used this battle. Costs 1 Chemical X. Grants <strong>+30% atk/def/spd, +20% hp</strong> for the battle. <strong>10% berserk chance</strong> — a berserk creature picks a random move and has a 25% self-hit. Megas <strong>unmega at battle end</strong> (one battle only).</p>
 
-14 SMs
+<h3>Ancients &amp; Mysteries (Pass 3)</h3>
 
-6 X moves
+<p><strong>15 ancients</strong> (A01–A15) — all stage 3, no evolutions, <strong>4-star or 5-star</strong>, stat totals <strong>520 / 580</strong>. <strong>5 mysteries</strong> (M1–M5) — all <strong>5-star</strong>, stat total <strong>600</strong>. Ancients have <strong>no mutant forms and no instinct art</strong>. Ancient type-chart rule: <code>baseType()</code> strips the <code>"Ancient "</code> prefix so ancients fight on their base category's chart, and ancient-typed moves get STAB via the same normalization.</p>
 
-3 starter rare moves (Grizzly's Rage, Alpha's Command, Great White Terror)
+<p><strong>Ancient catch rule:</strong> nets, cages, and lassos <strong>cannot hold them</strong> (stage 3 exceeds their <code>maxStage</code>). Only <strong>traps / snares / tranquilizer darts</strong> work.</p>
 
-Plus 9 TM items (tmBite, tmWaterJet, tmFireBreath, tmElectricShock, tmFlash, tmSonicScream, tmTremor, tmMoltenStrike, tmPressurePoint) — tournament-only, never in SHOP_STOCK.
+<hr>
 
-Effects are strict: only what the docs state. Roar → {stat:"atk", stages:-1, target:"foe"}. Venom Bite → {status:"poison", chance:0.3}. Camouflage → {stat:"eva", stages:1, target:"self"}. Vague doc effects become special tags the engine implements: trap, dig, soundblock, pierce, alwaysHit, highCrit, sureHitNext.
+<h2>⚔️ Battle System</h2>
 
-Signatures
-Every creature has one. SIG_MOVES is a per-signature-name override table so no signature is left unresolved. Attack-implying names → power 65, category-type, no effect. Defensive/utility names → self-def buffs, alwaysHit for tracking, heal25 for regeneration. The ancient file adds its own ANCIENT_SIG_MOVES.
+<h3>Two orthogonal type charts</h3>
 
-Catch balance fix (Pass 3)
-The original endgame was statistically uncatchable. Fixed two ways:
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong><code>CAT_CHART</code></strong> — 9 categories (Mammal, Bird, Fish, Reptile, Arachnid, Insect, Amphibian, Mollusk, Crustacean), with every strong/weak pairing from the battle doc.</li>
+<li><strong><code>SENSE_CHART</code></strong> — 7 senses (Sight, Hearing, Echolocation, Electroreception, Touch, Smell, Heat), same treatment.</li>
+</ul>
 
-5-star base rate 0.1 → 0.22
+<p>Default multiplier is <strong>1</strong>. Moves are <code>kind: "category" | "sense"</code> and typed to match.</p>
 
-Tranquilizer darts actually sleep the target (as their description promises), enabling the 1.5× sleep bonus and stopping the mystery 8%/turn flee
+<h3>Move roster — 95 total</h3>
 
-Result: a 5-star at 1 HP with darts + sleep + Catching Lv10 catches at ~13.6% per throw (avg ~7 throws) instead of ~0.17%.
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>36 category moves</strong></li>
+<li><strong>28 sense moves</strong></li>
+<li><strong>8 HMs</strong></li>
+<li><strong>14 SMs</strong></li>
+<li><strong>6 X moves</strong></li>
+<li><strong>3 starter rare moves</strong> (Grizzly's Rage, Alpha's Command, Great White Terror)</li>
+<li>Plus <strong>9 TM items</strong> (<code>tmBite</code>, <code>tmWaterJet</code>, <code>tmFireBreath</code>, <code>tmElectricShock</code>, <code>tmFlash</code>, <code>tmSonicScream</code>, <code>tmTremor</code>, <code>tmMoltenStrike</code>, <code>tmPressurePoint</code>) — tournament-only, never in <code>SHOP_STOCK</code>.</li>
+</ul>
 
-Presentation
-BT.weather particles
+<p>Effects are strict: only what the docs state. <code>Roar</code> → <code>{stat:"atk", stages:-1, target:"foe"}</code>. <code>Venom Bite</code> → <code>{status:"poison", chance:0.3}</code>. <code>Camouflage</code> → <code>{stat:"eva", stages:1, target:"self"}</code>. Vague doc effects become <strong>special tags</strong> the engine implements: <code>trap</code>, <code>dig</code>, <code>soundblock</code>, <code>pierce</code>, <code>alwaysHit</code>, <code>highCrit</code>, <code>sureHitNext</code>.</p>
 
-Damage popups colored by crit (gold, bigger) / super-effective (green) / resisted (pink)
+<h3>Signatures</h3>
 
-Player HP bars carry an XP bar and a status chip
+<p>Every creature has one. <code>SIG_MOVES</code> is a <strong>per-signature-name override table</strong> so no signature is left unresolved. Attack-implying names → <strong>power 65, category-type, no effect</strong>. Defensive/utility names → self-def buffs, <code>alwaysHit</code> for tracking, <code>heal25</code> for regeneration. The ancient file adds its own <code>ANCIENT_SIG_MOVES</code>.</p>
 
-Hit shake on crit / super-effective (decaying sprite offset)
+<h3>Catch balance fix (Pass 3)</h3>
 
-Pulsing red HP-bar border at HP ≤ 20%
+<p>The original endgame was statistically uncatchable. Fixed two ways:</p>
 
-★MEGA / ★M / ★I tags on the HP bar
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li>5-star base rate <strong>0.1 → 0.22</strong></li>
+<li>Tranquilizer darts <strong>actually sleep</strong> the target (as their description promises), enabling the <strong>1.5× sleep bonus</strong> and stopping the mystery 8%/turn flee</li>
+</ul>
 
-🎒 Items & Economy
-83 standard items across 9 categories: Healing & Medicine, Food & Drink, Catching, Materials, Gear & Clothing, Transport & Upgrades, Battle & Performance, Key Items, Money. Plus 9 TM items kept separate.
+<p>Result: a 5-star at 1 HP with darts + sleep + Catching Lv10 catches at <strong>~13.6% per throw</strong> (avg ~7 throws) instead of <strong>~0.17%</strong>.</p>
 
-Prices are rule-derived from the docs (which mostly don't list them), with the two transport exceptions preserved (bicycle 50, car 5000). Highlights:
+<h3>Presentation</h3>
 
-Catching — net 100, trap 150, cage 300, snare 80, lasso 120, tranquilizer darts 200, bait 20, whistle 60
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong><code>BT.weather</code></strong> particles</li>
+<li>Damage popups colored by crit (gold, bigger) / super-effective (green) / resisted (pink)</li>
+<li>Player HP bars carry an <strong>XP bar</strong> and a status chip</li>
+<li><strong>Hit shake</strong> on crit / super-effective (decaying sprite offset)</li>
+<li><strong>Pulsing red HP-bar border</strong> at HP ≤ 20%</li>
+<li><strong>★MEGA / ★M / ★I</strong> tags on the HP bar</li>
+</ul>
 
-Materials — wood 5, stone 5, iron ore 40, copper ore 30, leather 60, herbs 15, scrap metal 25 …
+<hr>
 
-Transport parts — gasoline 40, car battery 500, engine parts 300, tire 120, bicycle parts 150 …
+<h2>🎒 Items &amp; Economy</h2>
 
-Battle — adrenaline shot 150, flare 80, smoke bomb 120, pepper spray 100, bear spray 130, Chemical X 5000 (preserved as buyable despite its "not stocked in normal shops" flavor — a Pass-2 decision)
+<p><strong>83 standard items</strong> across 9 categories: Healing &amp; Medicine, Food &amp; Drink, Catching, Materials, Gear &amp; Clothing, Transport &amp; Upgrades, Battle &amp; Performance, Key Items, Money. <strong>Plus 9 TM items</strong> kept separate.</p>
 
-Key items & cash/coins — price 0, use: null
+<p>Prices are rule-derived from the docs (which mostly don't list them), with the two transport exceptions preserved (bicycle 50, car 5000). Highlights:</p>
 
-Item uses are strict: heal (with amounts), catch (with catchMod), cure (with one of poison/burn/sleep/paralysis/infection/bleeding/crippled/bruised/fainted), battle, evo (with evoFor), material, key, food, tm.
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>Catching</strong> — net 100, trap 150, cage 300, snare 80, lasso 120, tranquilizer darts 200, bait 20, whistle 60</li>
+<li><strong>Materials</strong> — wood 5, stone 5, iron ore 40, copper ore 30, leather 60, herbs 15, scrap metal 25 …</li>
+<li><strong>Transport parts</strong> — gasoline 40, car battery 500, engine parts 300, tire 120, bicycle parts 150 …</li>
+<li><strong>Battle</strong> — adrenaline shot 150, flare 80, smoke bomb 120, pepper spray 100, bear spray 130, <strong>Chemical X 5000</strong> (preserved as buyable despite its "not stocked in normal shops" flavor — a Pass-2 decision)</li>
+<li><strong>Key items &amp; cash/coins</strong> — price 0, <code>use: null</code></li>
+</ul>
 
-📜 Story & Missions
-47 missions across 5 phases, all chained, all self-checked.
+<p>Item uses are strict: <code>heal</code> (with amounts), <code>catch</code> (with <code>catchMod</code>), <code>cure</code> (with one of poison/burn/sleep/paralysis/infection/bleeding/crippled/bruised/fainted), <code>battle</code>, <code>evo</code> (with <code>evoFor</code>), <code>material</code>, <code>key</code>, <code>food</code>, <code>tm</code>.</p>
 
-Phase 1 — The Last Starter
-lastStarter → firstWood → firstCatch → firstBase → starterPath → (starterPathBear | starterPathWolf | starterPathShark) → firstTournament → foreclosure → lawsuitTV → peopleTalking → smallShops → sickAnimals → quietFriendLeaves → secondTournament → thirdTournament → labLog → coldNorth → coast
+<hr>
 
-Phase 2 — Rok City
-rokCity → universityKids → corruption → flock → fourthTournament → fifthTournament → sixthTournament → seventhTournament → theChoice
+<h2>📜 Story &amp; Missions</h2>
 
-The Choice — Mara (fight) vs Caleb (join)
-theChoice forks permanently:
+<p><strong>47 missions</strong> across <strong>5 phases</strong>, all chained, all self-checked.</p>
 
-Fight path: leak → indieAlliance → securityTeam → facility → exposure
+<h3>Phase 1 — The Last Starter</h3>
 
-Join path: interview → ladder → quietFriendsPath → dirtyWork → executive
+<p><code>lastStarter</code> → <code>firstWood</code> → <code>firstCatch</code> → <code>firstBase</code> → <code>starterPath</code> → <code>(starterPathBear | starterPathWolf | starterPathShark)</code> → <code>firstTournament</code> → <code>foreclosure</code> → <code>lawsuitTV</code> → <code>peopleTalking</code> → <code>smallShops</code> → <code>sickAnimals</code> → <code>quietFriendLeaves</code> → <code>secondTournament</code> → <code>thirdTournament</code> → <code>labLog</code> → <code>coldNorth</code> → <code>coast</code></p>
 
-A one-time reconsider is available from the menu while a path mission is active. Switching abandons the old mission (flagged ABANDONED in the panel), marks the old side permanently hostile, and activates the other path. Exclusives: 2H Alpha Wolf (Fight), M. Alpha Lion (Join).
+<h3>Phase 2 — Rok City</h3>
 
-Phase 3–4 — The East & The Endgame
-dumpSite → theEast → theMutants → theWreckyard → theCave → finalBattle → eighthTournament → ninthTournament → tenthTournament → the75World → sanctuary → mysterySpino → mysteryQuetz → mysteryTitan → mysteryMega → mysteryBat → wholeStory (end, next: null)
+<p><code>rokCity</code> → <code>universityKids</code> → <code>corruption</code> → <code>flock</code> → <code>fourthTournament</code> → <code>fifthTournament</code> → <code>sixthTournament</code> → <code>seventhTournament</code> → <code>theChoice</code></p>
 
-Plus side missions climbLesson (Cave Guide) and smashLesson (Hollow Keeper).
+<h3>The Choice — Mara (fight) vs Caleb (join)</h3>
 
-Mission rewards support cash, items, xp, unlock (string or array), rank (corp rank 1–5), and creature gifts via reward.creature and reward.creature2. Objective types: talk, starter, gather, catch (with optional mutant: true), build, battle, tournament, reach, choice.
+<p><code>theChoice</code> forks permanently:</p>
 
-🏆 Tournaments — 10 Cups, 112 Trainers
-#	Cup	Levels	Location	Final	Unlock
-1	Rookie Cup	1–5	Mirage Oasis	Marcus	Catching
-2	Forest Clash	5–10	Whispering Woods	Sofia	Ant Colony
-3	Reef Rumble	10–20	Coral Reef	The Reef Champion	HM SWIM
-4	Desert Heat	20–30	Ember Dunes	The Sand King	Scorpions' Nest
-5	Bazaar Brawl	30–40	Grand Bazaar	The Bazaar Boss	HM SOAR
-6	Frost Crown	40–50	Frozen Roost	The Frost Queen	Ice Lake
-7	University Games	50–60	Ivory Tower	Caleb	Rok City (ceremonial)
-8	Wasteland War	60–75	Rust Fields	The Wasteland King	HM LIGHT
-9	Rok City Championship	75–90	Rok City	Corporate Champion	HM DIVE
-10	Ancient Crown	90–100	Echo Caves	Ancient Keeper	longDarkExit
-TournamentFlow is cup-generic: it builds its bracket by each trainer's round field (round32 → round16 → quarterfinal → semifinal → final), resolves 3/4/5 battles depending on cup size, and maps every win to its mission + champion flag (G.flags[cup.id + 'Champion']).
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>Fight path:</strong> <code>leak</code> → <code>indieAlliance</code> → <code>securityTeam</code> → <code>facility</code> → <code>exposure</code></li>
+<li><strong>Join path:</strong> <code>interview</code> → <code>ladder</code> → <code>quietFriendsPath</code> → <code>dirtyWork</code> → <code>executive</code></li>
+</ul>
 
-The Ancient Crown is a 32-trainer cup — 16 / 9 / 4 / 2 / 1 — with a 9th round16 trainer (Relic) added to make the arithmetic match size: 32.
+<p>A <strong>one-time reconsider</strong> is available from the menu while a path mission is active. Switching abandons the old mission (flagged <code>ABANDONED</code> in the panel), marks the old side permanently hostile, and activates the other path. Exclusives: <strong>2H Alpha Wolf</strong> (Fight), <strong>M. Alpha Lion</strong> (Join).</p>
 
-Rewards live in both the cup and its mission (self-check enforces they match). Creature gifts live only in missions. The Ancient Crown's 3-star gifts are 045 Great White Shark Lv85 and A02 Dire Wolf Lv90 4-star.
+<h3>Phase 3–4 — The East &amp; The Endgame</h3>
 
-🖥️ Online Hub — Local-First Backend
-Everything online runs against BACKEND in js/backend.js, backed by localStorage['metamonsters_backend_v1']. All 17 tables from the backend doc are present: accounts, profiles, creatures, items, bases, skills, trades, battles, messages, mailbox, friends, guilds, marketplace, dailyRewards, achievements, liveEvents, saves. Every method returns {ok, ...}. Passwords are hashed (never plain — local-only).
+<p><code>dumpSite</code> → <code>theEast</code> → <code>theMutants</code> → <code>theWreckyard</code> → <code>theCave</code> → <code>finalBattle</code> → <code>eighthTournament</code> → <code>ninthTournament</code> → <code>tenthTournament</code> → <code>the75World</code> → <code>sanctuary</code> → <code>mysterySpino</code> → <code>mysteryQuetz</code> → <code>mysteryTitan</code> → <code>mysteryMega</code> → <code>mysteryBat</code> → <code>wholeStory</code> <em>(end, next: null)</em></p>
 
-The hub lives on the Upper Deck — 13 tabs, all functional, no dead buttons:
-Account · Chat · PvP · Trade · Market · Friends · Mail · Guilds · Daily · Events · Achievements · Leaders · History
+<p>Plus side missions <code>climbLesson</code> (Cave Guide) and <code>smashLesson</code> (Hollow Keeper).</p>
 
-Trade rules
-One place per creature. Trade floors enforced: 1★ = 1–5 · 2★ = 5–100 · 3★ = 100–10k · 4★ = gift-only, NEVER listed · 5★ = 100k–1M. Max 1 million. Player cap 1,000.
+<p>Mission rewards support <code>cash</code>, <code>items</code>, <code>xp</code>, <code>unlock</code> (string <strong>or</strong> array), <code>rank</code> (corp rank 1–5), and <strong>creature gifts</strong> via <code>reward.creature</code> and <code>reward.creature2</code>. Objective types: <code>talk</code>, <code>starter</code>, <code>gather</code>, <code>catch</code> (with optional <code>mutant: true</code>), <code>build</code>, <code>battle</code>, <code>tournament</code>, <code>reach</code>, <code>choice</code>.</p>
 
-The bot world
-12 seeded bots — Rin, Boz, Suki, Ash, Wren, Kit, Lila, Moss, Tala, Nils, Ila, Dee — levels 10–95, real creature parties. 3 guilds (Rok City Elite / Indie Trainers / East Survivors, led by bot-01/02/03). Seeded chat, marketplace listings, open trade offers. Bots auto-accept PvP, auto-respond to trades by star-value comparison, and chatter from a ~30-line pool at 50% chance.
+<hr>
 
-Systems
-18 achievements — First Catch, First Tournament, Rookie/Forest/Reef/Ancient Champion, First Mutant, First Mega, First Ancient, Mystery Hunter, 10/50 Catches, Level 50/100, Rich, Guild Founder, First Trade, First PvP Win
+<h2>🏆 Tournaments — 10 Cups, 112 Trainers</h2>
 
-3 live events — Megalodon Week, Double XP Weekend, Ancient Hunt (date windows computed so one always runs)
+<table align="center" style="text-align:center; border-collapse:collapse;">
+<tr><th>#</th><th>Cup</th><th>Levels</th><th>Location</th><th>Final</th><th>Unlock</th></tr>
+<tr><td>1</td><td><strong>Rookie Cup</strong></td><td>1–5</td><td>Mirage Oasis</td><td>Marcus</td><td>Catching</td></tr>
+<tr><td>2</td><td><strong>Forest Clash</strong></td><td>5–10</td><td>Whispering Woods</td><td>Sofia</td><td>Ant Colony</td></tr>
+<tr><td>3</td><td><strong>Reef Rumble</strong></td><td>10–20</td><td>Coral Reef</td><td>The Reef Champion</td><td>HM SWIM</td></tr>
+<tr><td>4</td><td><strong>Desert Heat</strong></td><td>20–30</td><td>Ember Dunes</td><td>The Sand King</td><td>Scorpions' Nest</td></tr>
+<tr><td>5</td><td><strong>Bazaar Brawl</strong></td><td>30–40</td><td>Grand Bazaar</td><td>The Bazaar Boss</td><td>HM SOAR</td></tr>
+<tr><td>6</td><td><strong>Frost Crown</strong></td><td>40–50</td><td>Frozen Roost</td><td>The Frost Queen</td><td>Ice Lake</td></tr>
+<tr><td>7</td><td><strong>University Games</strong></td><td>50–60</td><td>Ivory Tower</td><td>Caleb</td><td>Rok City (ceremonial)</td></tr>
+<tr><td>8</td><td><strong>Wasteland War</strong></td><td>60–75</td><td>Rust Fields</td><td>The Wasteland King</td><td>HM LIGHT</td></tr>
+<tr><td>9</td><td><strong>Rok City Championship</strong></td><td>75–90</td><td>Rok City</td><td>Corporate Champion</td><td>HM DIVE</td></tr>
+<tr><td>10</td><td><strong>Ancient Crown</strong></td><td>90–100</td><td>Echo Caves</td><td>Ancient Keeper</td><td><code>longDarkExit</code></td></tr>
+</table>
 
-Daily rewards — once per calendar day, streak, 100 cash × streak (cap 1,000) + bandage; ≥3 streak adds a trap, ≥7 adds Chemical X
+<p><strong><code>TournamentFlow</code></strong> is cup-generic: it builds its bracket by each trainer's <code>round</code> field (<code>round32</code> → <code>round16</code> → <code>quarterfinal</code> → <code>semifinal</code> → <code>final</code>), resolves 3/4/5 battles depending on cup size, and maps every win to its mission + champion flag (<code>G.flags[cup.id + 'Champion']</code>).</p>
 
-Cloud saves — JSON round-trip via saveGame / loadGame
+<p>The <strong>Ancient Crown</strong> is a <strong>32-trainer cup</strong> — 16 / 9 / 4 / 2 / 1 — with a 9th <code>round16</code> trainer (<em>Relic</em>) added to make the arithmetic match <code>size: 32</code>.</p>
 
-🕰️ The Three Revision Passes
-The game was built in three revision passes, each upgrading in place:
+<p>Rewards live in <strong>both</strong> the cup and its mission (self-check enforces they match). Creature gifts live <strong>only</strong> in missions. The Ancient Crown's 3-star gifts are <strong>045 Great White Shark Lv85</strong> and <strong>A02 Dire Wolf Lv90 4-star</strong>.</p>
 
-Pass 1 — The Foundation
-93-dex skeleton, 20 missions, 3 tournaments (24 trainers), 15 encounter areas, 20 maps, 2 TM items, 8 battle backgrounds. Starter-choice logic (assignStarters), mission chaining, TournamentFlow, AREA_BATTLE mapping, G.flags.visited, bicycle + garage, shop sellers, animated title screen.
+<hr>
 
-Pass 2 — The City & The Choice
-47 missions, 7 tournaments (80 trainers), 23 encounter areas, 32 maps, 6 TM items, 12 battle backgrounds, 9 character sprites. Added mutants, Mega Evolution, the Mara/Caleb fork, Rok City, the east, the car + flying transport, NPCs, shops, and the path-exclusive gifts.
+<h2>🖥️ Online Hub — Local-First Backend</h2>
 
-Pass 3 — The Ancient World
-59 maps, 10 tournaments (112 trainers), 40 encounter areas, 113 total dex, 9 TM items, 16 battle backgrounds, 17 backend tables, 13 hub tabs. Added ancients, mysteries, the 75+ world, HM assignments (LIGHT/DIVE from tournaments 8/9; CLIMB/SMASH from side missions), the Long Dark gate, the local-first backend, the hub, and the catch balance fix.
+<p>Everything online runs against <strong><code>BACKEND</code></strong> in <code>js/backend.js</code>, backed by <code>localStorage['metamonsters_backend_v1']</code>. All <strong>17 tables</strong> from the backend doc are present: accounts, profiles, creatures, items, bases, skills, trades, battles, messages, mailbox, friends, guilds, marketplace, dailyRewards, achievements, liveEvents, saves. Every method returns <code>{ok, ...}</code>. Passwords are hashed (never plain — local-only).</p>
 
-🧪 Quality — 101 Self-Checks, All Passing
-tools/self-check.js verifies the whole project. Coverage includes:
+<p><strong>The hub lives on the Upper Deck</strong> — 13 tabs, all functional, no dead buttons:</p>
 
-✅ DEX = 113, ANCIENT_DEX = 15, MYSTERY_DEX = 5
+<p>Account · Chat · PvP · Trade · Market · Friends · Mail · Guilds · Daily · Events · Achievements · Leaders · History</p>
 
-✅ ANCIENT_LEARNSETS = 20, ancient stat totals (520 / 580 / 600)
+<h3>Trade rules</h3>
 
-✅ MAPS = 59, ENCOUNTERS = 40, TOURNAMENTS = 10, TM_ITEMS = 9
+<p>One place per creature. Trade floors enforced: 1★ = 1–5 · 2★ = 5–100 · 3★ = 100–10k · <strong>4★ = gift-only, NEVER listed</strong> · 5★ = 100k–1M. Max 1 million. Player cap 1,000.</p>
 
-✅ Ancient Crown bracket = 16 / 9 / 4 / 2 / 1
+<h3>The bot world</h3>
 
-✅ Cup-reward match for all 10 cups
+<p><strong>12 seeded bots</strong> — Rin, Boz, Suki, Ash, Wren, Kit, Lila, Moss, Tala, Nils, Ila, Dee — levels 10–95, real creature parties. <strong>3 guilds</strong> (Rok City Elite / Indie Trainers / East Survivors, led by bot-01/02/03). Seeded chat, marketplace listings, open trade offers. Bots auto-accept PvP, auto-respond to trades by star-value comparison, and chatter from a ~30-line pool at 50% chance.</p>
 
-✅ Full pass-3 mission chain + the 38-entry objective-ID map
+<h3>Systems</h3>
 
-✅ creature2 gifts resolve and are 3-star (with the A02 4-star exception)
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>18 achievements</strong> — First Catch, First Tournament, Rookie/Forest/Reef/Ancient Champion, First Mutant, First Mega, First Ancient, Mystery Hunter, 10/50 Catches, Level 50/100, Rich, Guild Founder, First Trade, First PvP Win</li>
+<li><strong>3 live events</strong> — Megalodon Week, Double XP Weekend, Ancient Hunt (date windows computed so one always runs)</li>
+<li><strong>Daily rewards</strong> — once per calendar day, streak, 100 cash × streak (cap 1,000) + bandage; ≥3 streak adds a trap, ≥7 adds Chemical X</li>
+<li><strong>Cloud saves</strong> — JSON round-trip via <code>saveGame</code> / <code>loadGame</code></li>
+</ul>
 
-✅ Talk objectives name real NPC_DIALOG handlers
+<hr>
 
-✅ Sprite check resolves ancient/mystery paths via creatureSprite()
+<h2>🕰️ The Three Revision Passes</h2>
 
-📝 Spec Tensions — Resolved & Flagged
-A few doc contradictions were resolved in each pass rather than left ambiguous. The headliners:
+<p>The game was built in three revision passes, each upgrading in place:</p>
 
-Two Maras — Elder Mara (Haven elder) and Mara (Rok City bazaar owner / resistance leader) are different people. The docs never say otherwise.
+<h3>Pass 1 — <em>The Foundation</em></h3>
 
-"The City Tournament" = the Bazaar Brawl — mission fifthTournament, titled accordingly.
+<p>93-dex skeleton, 20 missions, 3 tournaments (24 trainers), 15 encounter areas, 20 maps, 2 TM items, 8 battle backgrounds. Starter-choice logic (<code>assignStarters</code>), mission chaining, <code>TournamentFlow</code>, <code>AREA_BATTLE</code> mapping, <code>G.flags.visited</code>, bicycle + garage, shop sellers, animated title screen.</p>
 
-Rok City walkable from start — the University Games' "unlocks Rok City" is a ceremonial flag only.
+<h3>Pass 2 — <em>The City &amp; The Choice</em></h3>
 
-TM Focus Beam / Lightning Strike don't exist — substituted TM Flash (TM14) and TM Sonic Scream (TM15).
+<p>47 missions, 7 tournaments (80 trainers), 23 encounter areas, 32 maps, 6 TM items, 12 battle backgrounds, 9 character sprites. Added mutants, Mega Evolution, the Mara/Caleb fork, Rok City, the east, the car + flying transport, NPCs, shops, and the path-exclusive gifts.</p>
 
-Ancient Crown arithmetic — 16+8+4+2+1 = 31, not 32. Added a 9th round16 trainer (Relic) to match size: 32.
+<h3>Pass 3 — <em>The Ancient World</em></h3>
 
-9th tournament gift — doc said Steel Crab, but that's only 2★. Substituted 045 Great White Shark Lv85 (3★).
+<p>59 maps, 10 tournaments (112 trainers), 40 encounter areas, <strong>113 total dex</strong>, 9 TM items, 16 battle backgrounds, 17 backend tables, 13 hub tabs. Added ancients, mysteries, the 75+ world, HM assignments (LIGHT/DIVE from tournaments 8/9; CLIMB/SMASH from side missions), the Long Dark gate, the local-first backend, the hub, and the catch balance fix.</p>
 
-HM LIGHT / DIVE / CLIMB / SMASH — no doc assigned them. Assigned here: LIGHT = Wasteland War, DIVE = Rok City Championship, CLIMB = climbLesson, SMASH = smashLesson.
+<hr>
 
-"Venom" signature — SIG_MOVES is keyed by name, so Megarachne's poison Venom also poisons the 4 main-world Venom users. Thematically correct, kept as-is.
+<h2>🧪 Quality — 101 Self-Checks, All Passing</h2>
 
-Chemical X buyable — preserved Pass-1 behavior despite its "not stocked in normal shops" flavor.
+<p><code>tools/self-check.js</code> verifies the whole project. Coverage includes:</p>
 
-5★ catch rate — the original 0.1 made the endgame statistically unbeatable. Raised to 0.22, plus tranquilizer darts now actually sleep. Documented in the balance-fix section.
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li>✅ <code>DEX = 113</code>, <code>ANCIENT_DEX = 15</code>, <code>MYSTERY_DEX = 5</code></li>
+<li>✅ <code>ANCIENT_LEARNSETS = 20</code>, ancient stat totals (520 / 580 / 600)</li>
+<li>✅ <code>MAPS = 59</code>, <code>ENCOUNTERS = 40</code>, <code>TOURNAMENTS = 10</code>, <code>TM_ITEMS = 9</code></li>
+<li>✅ Ancient Crown bracket = 16 / 9 / 4 / 2 / 1</li>
+<li>✅ Cup-reward match for all 10 cups</li>
+<li>✅ Full pass-3 mission chain + the 38-entry objective-ID map</li>
+<li>✅ <code>creature2</code> gifts resolve and are 3-star (with the A02 4-star exception)</li>
+<li>✅ Talk objectives name real <code>NPC_DIALOG</code> handlers</li>
+<li>✅ Sprite check resolves ancient/mystery paths via <code>creatureSprite()</code></li>
+</ul>
 
-Two open calls were not decided and remain flagged: stars per species vs. per stage, and Chemical X self-mutation.
+<hr>
 
-🚀 Quick Start
-bash
-# Serve the game directory with any static server
+<h2>📝 Spec Tensions — Resolved &amp; Flagged</h2>
+
+<p>A few doc contradictions were resolved in each pass rather than left ambiguous. The headliners:</p>
+
+<ul style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>Two Maras</strong> — Elder Mara (Haven elder) and Mara (Rok City bazaar owner / resistance leader) are <strong>different people</strong>. The docs never say otherwise.</li>
+<li><strong>"The City Tournament" = the Bazaar Brawl</strong> — mission <code>fifthTournament</code>, titled accordingly.</li>
+<li><strong>Rok City walkable from start</strong> — the University Games' "unlocks Rok City" is a ceremonial flag only.</li>
+<li><strong>TM Focus Beam / Lightning Strike don't exist</strong> — substituted <strong>TM Flash (TM14)</strong> and <strong>TM Sonic Scream (TM15)</strong>.</li>
+<li><strong>Ancient Crown arithmetic</strong> — 16+8+4+2+1 = 31, not 32. Added a 9th <code>round16</code> trainer (<em>Relic</em>) to match <code>size: 32</code>.</li>
+<li><strong>9th tournament gift</strong> — doc said Steel Crab, but that's only 2★. Substituted <strong>045 Great White Shark Lv85</strong> (3★).</li>
+<li><strong>HM LIGHT / DIVE / CLIMB / SMASH</strong> — no doc assigned them. Assigned here: LIGHT = Wasteland War, DIVE = Rok City Championship, CLIMB = <code>climbLesson</code>, SMASH = <code>smashLesson</code>.</li>
+<li><strong>"Venom" signature</strong> — <code>SIG_MOVES</code> is keyed by name, so Megarachne's poison Venom also poisons the 4 main-world Venom users. Thematically correct, kept as-is.</li>
+<li><strong>Chemical X buyable</strong> — preserved Pass-1 behavior despite its "not stocked in normal shops" flavor.</li>
+<li><strong>5★ catch rate</strong> — the original 0.1 made the endgame statistically unbeatable. Raised to <strong>0.22</strong>, plus tranquilizer darts now actually sleep. Documented in the balance-fix section.</li>
+</ul>
+
+<p>Two open calls were <strong>not</strong> decided and remain flagged: <em>stars per species vs. per stage</em>, and <em>Chemical X self-mutation</em>.</p>
+
+<hr>
+
+<h2>🚀 Quick Start</h2>
+
+<pre style="display:inline-block;text-align:left;"><code># Serve the game directory with any static server
 npx serve metamonsters-game
 
 # Run the full self-check suite
 node metamonsters-game/tools/self-check.js
-# → 101 checks, ALL CHECKS PASSED
-Open index.html in your browser. The title screen preloads 16 battle backgrounds, the Rok City skyline, and 9 character sprites. Click New Game to begin.
+# → 101 checks, ALL CHECKS PASSED</code></pre>
 
-Save key: metamonsters_save_v2 · Save version: 2 · Backend store: metamonsters_backend_v1
+<p>Open <code>index.html</code> in your browser. The title screen preloads 16 battle backgrounds, the Rok City skyline, and 9 character sprites. Click <strong>New Game</strong> to begin.</p>
 
-🗂️ Project Layout
-text
-metamonsters-game/
+<p><strong>Save key:</strong> <code>metamonsters_save_v2</code> · <strong>Save version:</strong> 2 · <strong>Backend store:</strong> <code>metamonsters_backend_v1</code></p>
+
+<hr>
+
+<h2>🗂️ Project Layout</h2>
+
+<pre style="display:inline-block;text-align:left;"><code>metamonsters-game/
 ├── index.html
 ├── css/
 ├── js/
@@ -320,5 +371,40 @@ metamonsters-game/
 │   ├── sprites/ancients/    ├── sprites/mystery/   ├── sprites/chars/
 │   └── bg/
 └── tools/
-    └── self-check.js        → 101 checks
-Loading order matters: dex → moves → items → missions → tournaments → encounters → mutants → ancients → engine. Boot-checks in main.js enforce it.
+    └── self-check.js        → 101 checks</code></pre>
+
+<p><strong>Loading order matters:</strong> <code>dex → moves → items → missions → tournaments → encounters → mutants → ancients → engine</code>. Boot-checks in <code>main.js</code> enforce it.</p>
+
+<hr>
+
+<h2>⚖️ Design Rules (Non-Negotiable)</h2>
+
+<ol style="list-style-position:inside;text-align:center;display:inline-block;">
+<li><strong>Plain JS, one global <code>const</code> per file.</strong> No modules. No imports. No external URLs.</li>
+<li><strong>Names, typings, evolutions, moves, items, prices, missions, and tournament data come from the docs</strong> — or from the explicit <code>RULE</code> lines in the schema spec.</li>
+<li><strong>No placeholders, no TODOs, no short files.</strong> If a count is off, fix it — do not ship.</li>
+<li><strong>Instinct stats are runtime-only.</strong> Never baked into <code>dex.js</code>.</li>
+<li><strong>Mutants are wild only in the east, only after the unlock, and never stack with Instinct.</strong></li>
+<li><strong>Mega lasts one battle.</strong> <code>unmegaParty()</code> runs at battle end.</li>
+<li><strong>Ancients have no mutants and no instinct art.</strong></li>
+<li><strong>TMs are tournament-only.</strong> Never in <code>SHOP_STOCK</code>.</li>
+<li><strong>Backend is local-first.</strong> Every state move goes through a <code>BACKEND</code> method that updates live <code>G</code> and the backend rows in the same call.</li>
+<li><strong>When docs contradict, follow the LATER-dated decision and note it in a comment at the top of the file.</strong></li>
+</ol>
+
+<hr>
+
+<h2>🏁 Status</h2>
+
+<p><strong>Complete.</strong> Pass 3 shipped. 101/101 self-checks passing. All ten tournaments wired, all 47 missions chained, all 113 creatures resolvable, all 40 encounter areas mapped, all 59 maps walkable, all 9 TMs teachable, all 18 achievements scannable, all 13 hub tabs functional.</p>
+
+<blockquote>
+<p><em>"Chemical X was never the problem. We were."</em></p>
+<p>— Elder Mara, probably</p>
+</blockquote>
+
+<hr>
+
+<p><strong>METAMONSTERS</strong> · Revision Pass 3 · FINAL · 2026-11-21</p>
+
+</div>
