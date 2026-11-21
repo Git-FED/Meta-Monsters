@@ -2,7 +2,9 @@
 
 <h1>⚡ METAMONSTERS</h1>
 
-<img width="1283" height="691" alt="Screenshot 2026-11-21 080457" src="https://github.com/user-attachments/assets/848ba30d-df78-4db0-8b2b-78e2ab1f2388" />
+<img width="949" height="630" alt="Screenshot 2026-11-21 094809" src="https://github.com/user-attachments/assets/e46bca32-b0c4-4184-b702-a5059713f818" />
+<img width="949" height="635" alt="Screenshot 2026-11-21 094823" src="https://github.com/user-attachments/assets/bbf26dec-708a-41e7-a576-56f7517d7ad3" />
+
 
 <p><em>A browser-based creature-taming RPG where humanity's greatest mistake — Chemical X — has leaked into the wild. Tame it. Train it. Or watch it consume everything.</em></p>
 
