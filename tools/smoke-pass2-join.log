@@ -1,0 +1,32 @@
+title visible: True
+title bg: assets/bg/title-city.png
+PASS intro done, overworld — overworld
+PASS mission lastStarter — lastStarter
+PASS choice panel: picked wolf
+PASS starter in party — Wolf Cub
+PASS mission firstWood — firstWood
+PASS setup: party leveled — Alpha Wolf Lv56, Golden Eagle Lv57
+PASS setup: mission theChoice — theChoice
+PASS east locked before dumpSite — [11, 9, 'haven']
+PASS choice panel: JOIN picked
+PASS path = join
+PASS mission interview — interview
+PASS interview talk done
+PASS mission ladder — ladder
+PASS corp rank Intern (1) — 1
+PASS ladder talk done
+PASS mission quietFriendsPath — quietFriendsPath
+PASS quietFriendsPath talk done
+PASS mission dirtyWork — dirtyWork
+PASS switch sides button offered
+PASS switch to resistance picked
+PASS path = fight after switch
+PASS hostile_join set
+PASS switched flag set
+PASS dirtyWork abandoned
+PASS mission leak after switch — leak
+PASS switch button gone (one-time)
+PASS plaza refuses after switch to fight — Rok Plaza doesn't serve resistance traitors. Mara's people can shop in the bazaar — or starve. Now get out of my store.
+ERRORS: none
+STEPS: 27/27 passed; ERRORS: 0
+EXIT:0

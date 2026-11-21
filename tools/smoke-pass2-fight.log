@@ -1,0 +1,140 @@
+title visible: True
+title bg: assets/bg/title-city.png
+PASS intro done, overworld — overworld
+PASS mission lastStarter — lastStarter
+PASS choice panel: picked wolf
+PASS starter in party — Wolf Cub
+PASS mission firstWood — firstWood
+PASS setup: party leveled — Alpha Wolf Lv56, Golden Eagle Lv57
+PASS setup: mission rokCity — rokCity
+PASS in Rok City — [28, 9, 'rokCity']
+PASS mission universityKids — universityKids
+PASS Caleb moved to university
+PASS drunkStudents battle started
+PASS drunkStudents beaten — overworld
+PASS mission corruption — corruption
+PASS corruption talk done
+PASS in bazaar — [8, 10, 'bazaar']
+PASS mission flock — flock
+PASS flock talk done
+PASS in university — [12, 16, 'university']
+PASS mission fourthTournament — fourthTournament
+PASS Desert Heat: in arena — emberArena
+PASS Desert Heat: round 1 started
+PASS Desert Heat: round 1 battle ended — dialog
+PASS Desert Heat: round 2 started
+PASS Desert Heat: round 2 battle ended — dialog
+PASS Desert Heat: round 3 started
+PASS Desert Heat: round 3 battle ended — dialog
+PASS Desert Heat champion
+PASS TM Fire Breath in bag — 1
+PASS mission fifthTournament — fifthTournament
+PASS Bazaar Brawl: in arena — bazaarArena
+PASS Bazaar Brawl: round 1 started
+PASS Bazaar Brawl: round 1 battle ended — dialog
+PASS Bazaar Brawl: round 2 started
+PASS Bazaar Brawl: round 2 battle ended — dialog
+PASS Bazaar Brawl: round 3 started
+PASS Bazaar Brawl: round 3 battle ended — dialog
+PASS Bazaar Brawl: round 4 started
+PASS Bazaar Brawl: round 4 battle ended — dialog
+PASS Bazaar Brawl champion
+PASS TM Electric Shock in bag — 1
+PASS 3-star gift (Reticulated Python 030) received — 006,015,030
+PASS HM SOAR unlocked
+PASS mission sixthTournament — sixthTournament
+PASS Frost Crown: in arena — frostArena
+PASS Frost Crown: round 1 started
+PASS Frost Crown: round 1 battle ended — dialog
+PASS Frost Crown: round 2 started
+PASS Frost Crown: round 2 battle ended — dialog
+PASS Frost Crown: round 3 started
+PASS Frost Crown: round 3 battle ended — dialog
+PASS Frost Crown: round 4 started
+PASS Frost Crown: round 4 battle ended — dialog
+PASS Frost Crown champion
+PASS TM Flash in bag — 1
+PASS mission seventhTournament — seventhTournament
+PASS party leveled for Caleb — Alpha Wolf Lv69, Golden Eagle Lv69, Reticulated Python Lv62, Alpha Komodo Lv64
+PASS University Games: in arena — universityArena
+PASS University Games: round 1 started
+PASS University Games: round 1 battle ended — dialog
+PASS University Games: round 2 started
+PASS University Games: round 2 battle ended — dialog
+PASS University Games: round 3 started
+PASS University Games: round 3 battle ended — dialog
+PASS University Games: round 4 started
+PASS University Games: round 4 battle ended — dialog
+PASS University Games champion
+PASS TM Sonic Scream in bag — 1
+PASS mission theChoice — theChoice
+PASS mega test: wild battle started
+PASS MEGA button offered
+PASS MEGA button clicked
+PASS mega applied to leader — Mega Alpha Wolf
+PASS mega name shows — Mega Alpha Wolf
+PASS mega battle ended — overworld
+PASS mega cleared after battle
+PASS choice panel: FIGHT picked
+PASS path = fight
+PASS mission leak — leak
+PASS plaza refuses fight path — Rok Plaza doesn't serve resistance traitors. Mara's people can shop in the bazaar — or starve. Now get out of my store.
+PASS mission indieAlliance — indieAlliance
+PASS indieAlliance pippa done
+PASS mission securityTeam — securityTeam
+PASS secTrainer1 battle started
+PASS secTrainer1 beaten — overworld
+PASS secTrainer2 battle started
+PASS secTrainer2 beaten — overworld
+PASS mission facility — facility
+PASS facility talk done
+PASS facilityGuard battle started
+PASS facilityGuard beaten — overworld
+PASS mission exposure — exposure
+PASS exposure talk done
+PASS mission dumpSite — dumpSite
+PASS east unlocked
+PASS mutants NOT yet unlocked
+PASS pre-dumpSite east foe is normal — Wolf Cub
+PASS dumpSite reach done
+PASS mission theEast (or already theMutants — reach auto-completes for visited maps) — theMutants
+PASS mutants unlocked by dumpSite
+PASS Chemical X x2 from dumpSite — 9
+PASS mission theMutants — theMutants
+PASS mutant catch 1: foe is mutant — 2H Alpha Wolf
+PASS mutant catch 1: mutant sprite path — assets/sprites/mutant/006-mutant-front.png
+PASS mutant catch 1: foe is mutant — 2H Wolf Cub
+PASS mutant catch 1: mutant sprite path — assets/sprites/mutant/004-mutant-front.png
+PASS mutant catch 1: caught
+PASS mutant catch 2: foe is mutant — 2H Wolf Cub
+PASS mutant catch 2: mutant sprite path — assets/sprites/mutant/004-mutant-front.png
+PASS mutant catch 2: caught
+PASS mutant catch 3: foe is mutant — 2H Wolf Cub
+PASS mutant catch 3: mutant sprite path — assets/sprites/mutant/004-mutant-front.png
+PASS mutant catch 3: foe is mutant — 2H Alpha Wolf
+PASS mutant catch 3: mutant sprite path — assets/sprites/mutant/006-mutant-front.png
+PASS mutant catch 3: foe is mutant — 2H Gray Wolf
+PASS mutant catch 3: mutant sprite path — assets/sprites/mutant/005-mutant-front.png
+PASS mutant catch 3: caught
+PASS mission theWreckyard — theWreckyard
+PASS mission theCave — theCave
+PASS party leveled for the gate — Alpha Wolf Lv86, Golden Eagle Lv86, Reticulated Python Lv84, Alpha Komodo Lv84, Alpha Tiger Lv83, 2H Alpha Wolf Lv82
+PASS mutantAlpha gate battle started
+PASS gate foe is Lv80 mutant — 2H Alpha Wolf Lv80
+PASS mutantAlpha beaten — overworld
+PASS mission finalBattle — finalBattle
+PASS gate sealed until pass 3 — The gate stands open a crack — and beyond it, the 75+ world waits. The way through is sealed for now. (The Long Dark and
+PASS finalBoss battle started
+PASS finalBoss beaten — overworld
+PASS chain complete: no active mission — None
+PASS car bought
+PASS car refueled — 1
+PASS Better Engine installed
+PASS drove to Rok City
+PASS in Rok City after drive — [14, 9, 'rokCity']
+PASS fuel spent — 1 -> 0
+PASS flew to Haven Village
+PASS in Haven after fly — [11, 7, 'haven']
+ERRORS: none
+STEPS: 135/135 passed; ERRORS: 0
+EXIT:0

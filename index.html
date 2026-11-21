@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metamonsters</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game" width="960" height="640"></canvas>
+  <div id="hud" class="hidden">
+    <div id="hud-left">
+      <span id="hud-location">Haven Village</span>
+      <span id="hud-mission"></span>
+    </div>
+    <div id="hud-right">
+      <span id="hud-cash">0 cash</span>
+      <span id="hud-time"></span>
+      <button id="btn-menu" title="Menu (M)">MENU</button>
+      <button id="btn-mute" title="Sound">♪</button>
+    </div>
+  </div>
+  <div id="dialog" class="hidden">
+    <div id="dialog-name"></div>
+    <div id="dialog-text"></div>
+    <div id="dialog-hint">▼ Enter / Space / Click</div>
+  </div>
+  <div id="menu" class="hidden"></div>
+  <div id="battle-ui" class="hidden">
+    <div id="battle-log"></div>
+    <div id="battle-actions"></div>
+  </div>
+  <div id="title-screen">
+    <img id="title-bg" src="assets/bg/title-city.png" alt="">
+    <div id="title-inner">
+      <h1 id="title-logo">META<span>MONSTERS</span></h1>
+      <p id="title-tag">Emerald meets the Walking Dead — a survival monster adventure</p>
+      <div id="title-buttons">
+        <button id="btn-new">NEW GAME</button>
+        <button id="btn-continue">CONTINUE</button>
+      </div>
+      <p id="title-foot">A 2D pixel adventure · Revision Pass 3 · Final · Save data stays on this device</p>
+    </div>
+  </div>
+  <div id="toast" class="hidden"></div>
+</div>
+<script src="js/data/dex.js"></script>
+<script src="js/data/moves.js"></script>
+<script src="js/data/items.js"></script>
+<script src="js/data/missions.js"></script>
+<script src="js/data/tournaments.js"></script>
+<script src="js/data/encounters.js"></script>
+<script src="js/data/mutants.js"></script>
+<script src="js/data/ancients.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/tiles.js"></script>
+<script src="js/battle.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/backend.js"></script>
+<script src="js/hub.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
