@@ -2,6 +2,8 @@
 
 <h1>⚡ METAMONSTERS</h1>
 
+<img width="1283" height="691" alt="Screenshot 2026-11-21 080457" src="https://github.com/user-attachments/assets/848ba30d-df78-4db0-8b2b-78e2ab1f2388" />
+
 <p><em>A browser-based creature-taming RPG where humanity's greatest mistake — Chemical X — has leaked into the wild. Tame it. Train it. Or watch it consume everything.</em></p>
 
 <p><strong>Metamonsters</strong> is a full-stack, single-page creature RPG built entirely in vanilla JavaScript — no frameworks, no modules, no imports, no external dependencies. Every dex entry, every move, every map tile, every NPC, and every line of dialogue lives in plain JS data files loaded via <code>&lt;script&gt;</code> tags. The entire online multiplayer layer runs <strong>local-first</strong> on <code>localStorage</code>, structured so a real server can be dropped in later without rewriting a single game-side call.</p>
