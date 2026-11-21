@@ -381,6 +381,8 @@ node metamonsters-game/tools/self-check.js
 
 <h2>⚖️ Design Rules (Non-Negotiable)</h2>
 
+<img width="1280" height="697" alt="Screenshot 2026-11-21 080404" src="https://github.com/user-attachments/assets/a90c31c0-4e00-4344-9df7-80b22f1b9326" />
+
 <ol style="list-style-position:inside;text-align:center;display:inline-block;">
 <li><strong>Plain JS, one global <code>const</code> per file.</strong> No modules. No imports. No external URLs.</li>
 <li><strong>Names, typings, evolutions, moves, items, prices, missions, and tournament data come from the docs</strong> — or from the explicit <code>RULE</code> lines in the schema spec.</li>
